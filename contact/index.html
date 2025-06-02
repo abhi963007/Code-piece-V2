@@ -75,7 +75,58 @@
       .nav-square, .background-navbar {
         display: none !important;
       }
+      
+      /* Mobile Navigation Slide Animation */
+      @media screen and (max-width: 991px) {
+        .w-nav-menu {
+          background-color: rgba(255, 255, 255, 0.95);
+          transform: translateX(100%);
+          transition: transform 0.3s ease-in-out;
+        }
+        
+        .w-nav-menu.w--open {
+          transform: translateX(0);
+          box-shadow: -5px 0px 15px rgba(0, 0, 0, 0.1);
+        }
+        
+        .nav-menu-content {
+          opacity: 0;
+          transform: translateY(20px);
+          transition: opacity 0.3s ease, transform 0.3s ease;
+          transition-delay: 0.2s;
+        }
+        
+        .w-nav-menu.w--open .nav-menu-content {
+          opacity: 1;
+          transform: translateY(0);
+        }
+        
+        .menu-button {
+          z-index: 1000;
+        }
+      }
     </style>
+    <script>
+      // Mobile menu animation enhancement
+      document.addEventListener('DOMContentLoaded', function() {
+        const menuButton = document.querySelector('.menu-button');
+        const navMenu = document.querySelector('.nav-menu');
+        
+        if (menuButton && navMenu) {
+          menuButton.addEventListener('click', function() {
+            // The w--open class is added/removed by Webflow's built-in functionality
+            // This just adds any additional animations we want
+            setTimeout(function() {
+              if (navMenu.classList.contains('w--open')) {
+                document.body.style.overflow = 'hidden'; // Prevent scrolling when menu is open
+              } else {
+                document.body.style.overflow = ''; // Restore scrolling when menu is closed
+              }
+            }, 50);
+          });
+        }
+      });
+    </script>
     <script type="text/javascript">
       ! function(o, c) {
         var n = c.documentElement,

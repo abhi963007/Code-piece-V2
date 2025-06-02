@@ -19,6 +19,27 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <script>
+      // Mobile menu animation enhancement
+      document.addEventListener('DOMContentLoaded', function() {
+        const menuButton = document.querySelector('.menu-button');
+        const navMenu = document.querySelector('.nav-menu');
+        
+        if (menuButton && navMenu) {
+          menuButton.addEventListener('click', function() {
+            // The w--open class is added/removed by Webflow's built-in functionality
+            // This just adds any additional animations we want
+            setTimeout(function() {
+              if (navMenu.classList.contains('w--open')) {
+                document.body.style.overflow = 'hidden'; // Prevent scrolling when menu is open
+              } else {
+                document.body.style.overflow = ''; // Restore scrolling when menu is closed
+              }
+            }, 50);
+          });
+        }
+      });
+    </script>
     <style>
       /* Custom styles for Code Piece */
       .nav-text, .heading-style-h2, .subtitle, .featured, .service-heading-item, .alternate-service-heading, .text-size-regular, .footer-description, .footer-title, .footer-link, .footer-copyright-text {
@@ -39,6 +60,36 @@
       .nav-link:hover {
         transform: scale(1.05);
         transition: transform 0.3s ease;
+      }
+      
+      /* Mobile Navigation Slide Animation */
+      @media screen and (max-width: 991px) {
+        .w-nav-menu {
+          background-color: rgba(255, 255, 255, 0.95);
+          transform: translateX(100%);
+          transition: transform 0.3s ease-in-out;
+        }
+        
+        .w-nav-menu.w--open {
+          transform: translateX(0);
+          box-shadow: -5px 0px 15px rgba(0, 0, 0, 0.1);
+        }
+        
+        .nav-menu-content {
+          opacity: 0;
+          transform: translateY(20px);
+          transition: opacity 0.3s ease, transform 0.3s ease;
+          transition-delay: 0.2s;
+        }
+        
+        .w-nav-menu.w--open .nav-menu-content {
+          opacity: 1;
+          transform: translateY(0);
+        }
+        
+        .menu-button {
+          z-index: 1000;
+        }
       }
       
       @media (min-width:992px) {
