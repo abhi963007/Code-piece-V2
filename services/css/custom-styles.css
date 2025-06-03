@@ -1,22 +1,57 @@
 /* Custom styles to adjust heading sizes */
 .heading-style-h2 {
-  font-size: 13rem; /* Reduced from 12rem */
+  font-size: 13rem;
 }
 
-/* Remove unwanted white space after the Get in Touch button */
+/* Aggressive fix for white space after the Get in Touch button */
+.cta-01 {
+  margin-bottom: -5rem !important;
+  height: auto !important; /* Override any height setting */
+  max-height: fit-content !important;
+}
+
+/* Fix the cta-square that's causing spacing issues */
+.cta-square {
+  display: none !important; /* Hide it completely if it's causing issues */
+}
+
 .cta-01 .spacer-small {
-  display: none; /* Completely remove the spacer */
+  display: none !important;
 }
 
-/* Additional fixes for spacing issues */
 .button-wrapper {
-  margin-bottom: 0;
+  margin-bottom: 0 !important;
+  padding-bottom: 0 !important;
 }
 
 .cta-content-wrapper {
-  padding-bottom: 0;
+  padding-bottom: 0 !important;
 }
 
 .cta-container {
-  margin-bottom: 0;
+  margin-bottom: 0 !important;
+  padding-bottom: 0 !important;
+  height: auto !important;
+}
+
+.cta-sticky {
+  height: auto !important;
+  position: static !important; /* Override any sticky positioning */
+}
+
+/* Reduce space under the main button */
+.main-button {
+  margin-bottom: 0 !important;
+}
+
+/* Target the image wrapper */
+.cta-image-wrapper {
+  padding-top: 0 !important;
+  margin-top: 0 !important;
+  position: static !important;
+}
+
+/* Force the footer up */
+.footer {
+  margin-top: -100px !important;
 }
