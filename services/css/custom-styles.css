@@ -1,0 +1,22 @@
+/* Custom styles to adjust heading sizes */
+.heading-style-h2 {
+  font-size: 13rem; /* Reduced from 12rem */
+}
+
+/* Remove unwanted white space after the Get in Touch button */
+.cta-01 .spacer-small {
+  display: none; /* Completely remove the spacer */
+}
+
+/* Additional fixes for spacing issues */
+.button-wrapper {
+  margin-bottom: 0;
+}
+
+.cta-content-wrapper {
+  padding-bottom: 0;
+}
+
+.cta-container {
+  margin-bottom: 0;
+}
