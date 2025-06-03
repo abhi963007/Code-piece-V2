@@ -23,6 +23,127 @@
     </script>
     <link href="images/67d09f8792de02eb02895d73_favicon.svg" rel="shortcut icon" type="image/x-icon">
     <link href="images/67d09f8aec2f8982d163d80d_webclip.svg" rel="apple-touch-icon">
+    <style>
+      .blog-link-wrapper {
+        transition: transform 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94), box-shadow 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+      }
+      
+      .blog-link-wrapper:hover {
+        transform: scale(1.12);
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+        z-index: 1;
+      }
+      
+      /* Newsletter Form Styles */
+      .form-icon-wrapper {
+        position: relative;
+        display: flex;
+        align-items: center;
+      }
+      
+      .form-icon {
+        position: absolute;
+        left: 12px;
+        width: 20px;
+        height: 20px;
+        color: #6b7280;
+      }
+      
+      .newsletter-form-input {
+        padding-left: 40px !important;
+        border-radius: 8px !important;
+        border: 1px solid #e5e7eb !important;
+        transition: all 0.3s ease;
+      }
+      
+      .newsletter-form-input:focus {
+        border-color: #4338ca !important;
+        box-shadow: 0 0 0 2px rgba(67, 56, 202, 0.2) !important;
+      }
+      
+      .button-primary {
+        border-radius: 8px !important;
+        transition: transform 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94), box-shadow 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 8px;
+        padding: 12px 24px !important;
+        background-color: #4f46e5 !important;
+        color: white !important;
+        font-weight: 500;
+      }
+      
+      .button-primary:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 10px 20px rgba(79, 70, 229, 0.3);
+        background-color: #4338ca !important;
+      }
+      
+      .button-icon {
+        width: 18px;
+        height: 18px;
+        transition: transform 0.3s ease;
+      }
+      
+      .button-primary:hover .button-icon {
+        transform: translateX(3px);
+      }
+      
+      .success-message-content, .error-message-content {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
+        padding: 16px;
+        border-radius: 8px;
+      }
+      
+      .success-icon, .error-icon {
+        width: 24px;
+        height: 24px;
+      }
+      
+      .success-icon {
+        color: #10b981;
+      }
+      
+      .error-icon {
+        color: #ef4444;
+      }
+      
+      /* Newsletter Section Styling */
+      
+      .newsletter-form {
+        position: relative;
+        z-index: 1;
+      }
+      
+      .newsletter-form-content {
+        display: flex;
+        flex-direction: row;
+        gap: 12px;
+        max-width: 600px;
+        margin: 0 auto;
+      }
+      
+      @media screen and (max-width: 767px) {
+        .newsletter-form-content {
+          flex-direction: column;
+        }
+        
+        .button-primary {
+          width: 100%;
+          justify-content: center;
+        }
+        
+        .button-text {
+          text-align: center;
+          display: block;
+          width: 100%;
+        }
+      }
+    </style>
     <script type="text/javascript">
       window.__WEBFLOW_CURRENCY_SETTINGS = {
         "currencyCode": "USD",
@@ -501,8 +622,183 @@
                   </div>
                 </div>
                 <div class="spacer-xlarge"></div>
+                
+                <div class="subtitle-wrapper">
+                  <div class="subtitle">Web Presence</div>
+                </div>
+                <h2 class="heading-style-h3 text-align-center">Website <span class="featured">Development</span></h2>
+                <div class="spacer-medium"></div>
+                <div class="w-dyn-list">
+                  <div role="list" class="blog-component-grid w-dyn-items">
+                    <div role="listitem" class="w-dyn-item">
+                      <a data-w-id="408714d0-c74a-fb13-09f1-982e783c4a9f" href="#" class="blog-link-wrapper w-inline-block">
+                        <div class="blog-image-wrapper">
+                          <img src="images/67d08fb9f071efcba5109eef_portrait-woman-working.webp" loading="lazy" style="-webkit-transform:translate3d(0, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-moz-transform:translate3d(0, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-ms-transform:translate3d(0, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);transform:translate3d(0, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0)" alt="Corporate Portfolio Website" class="blog-post-image">
+                          <div class="blog-post-category">Website</div>
+                        </div>
+                        <div class="blog-post-content">
+                          <h2 class="blog-post-title">Corporate Portfolio Website</h2>
+                          <div class="blog-post-info">
+                            <div class="blog-post-info-item">
+                              <div class="clock-icon w-embed">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+                                  <path d="M12 22C6.47715 22 2 17.5228 2 12C2 6.47715 6.47715 2 12 2C17.5228 2 22 6.47715 22 12C22 17.5228 17.5228 22 12 22ZM12 20C16.4183 20 20 16.4183 20 12C20 7.58172 16.4183 4 12 4C7.58172 4 4 7.58172 4 12C4 16.4183 7.58172 20 12 20ZM13 12H17V14H11V7H13V12Z"></path>
+                                </svg>
+                              </div>
+                              <div class="text-size-small">Features:</div>
+                              <div class="text-size-small text-color-primary">Responsive design, SEO optimized, CMS</div>
+                            </div>
+                            <div class="blog-post-icon-wrap">
+                              <div class="blog-post-icon-overflow">
+                                <div style="-webkit-transform:translate3d(0rem, 0rem, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-moz-transform:translate3d(0rem, 0rem, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-ms-transform:translate3d(0rem, 0rem, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);transform:translate3d(0rem, 0rem, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0)" class="blog-post-icon _01 w-embed">
+                                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+                                    <path d="M16.0037 9.41421L7.39712 18.0208L5.98291 16.6066L14.5895 8H7.00373V6H18.0037V17H16.0037V9.41421Z"></path>
+                                  </svg>
+                                </div>
+                                <div style="-webkit-transform:translate3d(-1rem, 1rem, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-moz-transform:translate3d(-1rem, 1rem, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-ms-transform:translate3d(-1rem, 1rem, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);transform:translate3d(-1rem, 1rem, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0)" class="blog-post-icon _02 w-embed">
+                                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+                                    <path d="M16.0037 9.41421L7.39712 18.0208L5.98291 16.6066L14.5895 8H7.00373V6H18.0037V17H16.0037V9.41421Z"></path>
+                                  </svg>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </a>
+                    </div>
+                    
+                    <div role="listitem" class="w-dyn-item">
+                      <a data-w-id="408714d0-c74a-fb13-09f1-982e783c4a9f" href="#" class="blog-link-wrapper w-inline-block">
+                        <div class="blog-image-wrapper">
+                          <img src="images/67d08eab5e6d7eec89b30fdb_women-working-together.webp" loading="lazy" style="-webkit-transform:translate3d(0, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-moz-transform:translate3d(0, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-ms-transform:translate3d(0, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);transform:translate3d(0, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0)" alt="Educational Institution Website" class="blog-post-image">
+                          <div class="blog-post-category">Website</div>
+                        </div>
+                        <div class="blog-post-content">
+                          <h2 class="blog-post-title">Educational Institution Website</h2>
+                          <div class="blog-post-info">
+                            <div class="blog-post-info-item">
+                              <div class="clock-icon w-embed">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+                                  <path d="M12 22C6.47715 22 2 17.5228 2 12C2 6.47715 6.47715 2 12 2C17.5228 2 22 6.47715 22 12C22 17.5228 17.5228 22 12 22ZM12 20C16.4183 20 20 16.4183 20 12C20 7.58172 16.4183 4 12 4C7.58172 4 4 7.58172 4 12C4 16.4183 7.58172 20 12 20ZM13 12H17V14H11V7H13V12Z"></path>
+                                </svg>
+                              </div>
+                              <div class="text-size-small">Features:</div>
+                              <div class="text-size-small text-color-primary">Course catalog, event calendar, student portal</div>
+                            </div>
+                            <div class="blog-post-icon-wrap">
+                              <div class="blog-post-icon-overflow">
+                                <div style="-webkit-transform:translate3d(0rem, 0rem, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-moz-transform:translate3d(0rem, 0rem, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-ms-transform:translate3d(0rem, 0rem, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);transform:translate3d(0rem, 0rem, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0)" class="blog-post-icon _01 w-embed">
+                                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+                                    <path d="M16.0037 9.41421L7.39712 18.0208L5.98291 16.6066L14.5895 8H7.00373V6H18.0037V17H16.0037V9.41421Z"></path>
+                                  </svg>
+                                </div>
+                                <div style="-webkit-transform:translate3d(-1rem, 1rem, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-moz-transform:translate3d(-1rem, 1rem, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-ms-transform:translate3d(-1rem, 1rem, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);transform:translate3d(-1rem, 1rem, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0)" class="blog-post-icon _02 w-embed">
+                                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+                                    <path d="M16.0037 9.41421L7.39712 18.0208L5.98291 16.6066L14.5895 8H7.00373V6H18.0037V17H16.0037V9.41421Z"></path>
+                                  </svg>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+                <div class="spacer-xlarge"></div>
               </div>
               <div class="line"></div>
+            </div>
+          </div>
+        </section>
+        <section class="section-academic-projects">
+          <div class="padding-global">
+            <div class="container-large">
+              <div class="padding-section-large">
+                <div class="subtitle-wrapper">
+                  <div class="subtitle">Academic Excellence</div>
+                </div>
+                <h2 class="heading-style-h3 text-align-center">Academic <span class="featured">Projects</span></h2>
+                <div class="spacer-medium"></div>
+                <div class="w-dyn-list">
+                  <div role="list" class="blog-component-grid w-dyn-items">
+                    <div role="listitem" class="w-dyn-item">
+                      <a data-w-id="408714d0-c74a-fb13-09f1-982e783c4a9f" href="#" class="blog-link-wrapper w-inline-block">
+                        <div class="blog-image-wrapper">
+                          <img src="images/67d08eab5e6d7eec89b30fdb_women-working-together.webp" loading="lazy" style="-webkit-transform:translate3d(0, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-moz-transform:translate3d(0, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-ms-transform:translate3d(0, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);transform:translate3d(0, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0)" alt="Machine Learning Research" class="blog-post-image">
+                          <div class="blog-post-category">Academic</div>
+                        </div>
+                        <div class="blog-post-content">
+                          <h2 class="blog-post-title">Machine Learning Research</h2>
+                          <div class="blog-post-info">
+                            <div class="blog-post-info-item">
+                              <div class="clock-icon w-embed">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+                                  <path d="M12 22C6.47715 22 2 17.5228 2 12C2 6.47715 6.47715 2 12 2C17.5228 2 22 6.47715 22 12C22 17.5228 17.5228 22 12 22ZM12 20C16.4183 20 20 16.4183 20 12C20 7.58172 16.4183 4 12 4C7.58172 4 4 7.58172 4 12C4 16.4183 7.58172 20 12 20ZM13 12H17V14H11V7H13V12Z"></path>
+                                </svg>
+                              </div>
+                              <div class="text-size-small">Features:</div>
+                              <div class="text-size-small text-color-primary">Data analysis, predictive modeling, visualization</div>
+                            </div>
+                            <div class="blog-post-icon-wrap">
+                              <div class="blog-post-icon-overflow">
+                                <div style="-webkit-transform:translate3d(0rem, 0rem, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-moz-transform:translate3d(0rem, 0rem, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-ms-transform:translate3d(0rem, 0rem, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);transform:translate3d(0rem, 0rem, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0)" class="blog-post-icon _01 w-embed">
+                                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+                                    <path d="M16.0037 9.41421L7.39712 18.0208L5.98291 16.6066L14.5895 8H7.00373V6H18.0037V17H16.0037V9.41421Z"></path>
+                                  </svg>
+                                </div>
+                                <div style="-webkit-transform:translate3d(-1rem, 1rem, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-moz-transform:translate3d(-1rem, 1rem, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-ms-transform:translate3d(-1rem, 1rem, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);transform:translate3d(-1rem, 1rem, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0)" class="blog-post-icon _02 w-embed">
+                                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+                                    <path d="M16.0037 9.41421L7.39712 18.0208L5.98291 16.6066L14.5895 8H7.00373V6H18.0037V17H16.0037V9.41421Z"></path>
+                                  </svg>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </a>
+                    </div>
+                    
+                    <div role="listitem" class="w-dyn-item">
+                      <a data-w-id="408714d0-c74a-fb13-09f1-982e783c4a9f" href="#" class="blog-link-wrapper w-inline-block">
+                        <div class="blog-image-wrapper">
+                          <img src="images/67d0903caa6f777f7c2b6522_portrait-woman-working-startup.webp" loading="lazy" style="-webkit-transform:translate3d(0, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-moz-transform:translate3d(0, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-ms-transform:translate3d(0, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);transform:translate3d(0, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0)" alt="Blockchain Thesis Project" class="blog-post-image">
+                          <div class="blog-post-category">Academic</div>
+                        </div>
+                        <div class="blog-post-content">
+                          <h2 class="blog-post-title">Blockchain Thesis Project</h2>
+                          <div class="blog-post-info">
+                            <div class="blog-post-info-item">
+                              <div class="clock-icon w-embed">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+                                  <path d="M12 22C6.47715 22 2 17.5228 2 12C2 6.47715 6.47715 2 12 2C17.5228 2 22 6.47715 22 12C22 17.5228 17.5228 22 12 22ZM12 20C16.4183 20 20 16.4183 20 12C20 7.58172 16.4183 4 12 4C7.58172 4 4 7.58172 4 12C4 16.4183 7.58172 20 12 20ZM13 12H17V14H11V7H13V12Z"></path>
+                                </svg>
+                              </div>
+                              <div class="text-size-small">Features:</div>
+                              <div class="text-size-small text-color-primary">Smart contracts, decentralized app, security analysis</div>
+                            </div>
+                            <div class="blog-post-icon-wrap">
+                              <div class="blog-post-icon-overflow">
+                                <div style="-webkit-transform:translate3d(0rem, 0rem, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-moz-transform:translate3d(0rem, 0rem, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-ms-transform:translate3d(0rem, 0rem, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);transform:translate3d(0rem, 0rem, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0)" class="blog-post-icon _01 w-embed">
+                                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+                                    <path d="M16.0037 9.41421L7.39712 18.0208L5.98291 16.6066L14.5895 8H7.00373V6H18.0037V17H16.0037V9.41421Z"></path>
+                                  </svg>
+                                </div>
+                                <div style="-webkit-transform:translate3d(-1rem, 1rem, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-moz-transform:translate3d(-1rem, 1rem, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-ms-transform:translate3d(-1rem, 1rem, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);transform:translate3d(-1rem, 1rem, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0)" class="blog-post-icon _02 w-embed">
+                                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+                                    <path d="M16.0037 9.41421L7.39712 18.0208L5.98291 16.6066L14.5895 8H7.00373V6H18.0037V17H16.0037V9.41421Z"></path>
+                                  </svg>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+                <div class="spacer-xlarge"></div>
+              </div>
             </div>
           </div>
         </section>
@@ -514,23 +810,52 @@
                 </h2>
                 <div class="spacer-large"></div>
                 <div class="max-width-large align-center">
-                  <div class="newsletter-form-wrapper w-form">
-                    <form id="wf-form-Newsletter-Form" name="wf-form-Newsletter-Form" data-name="Newsletter Form" method="get" class="newsletter-form" data-wf-page-id="67c3a26746760da8b697c276" data-wf-element-id="b3fdb3db-895d-9faa-e461-6e12d81034b5">
-                      <div class="form-input-block">
-                        <div class="form-label">Name:</div>
-                        <input class="form-input no-margin w-input" maxlength="256" name="name" data-name="Name" placeholder="Name" type="text" id="name">
+                  <p class="text-align-center">Subscribe to our newsletter to receive updates on our latest projects, tech insights, and exclusive behind-the-scenes content from our development team.</p>
+                  <div class="spacer-medium"></div>
+                  <div class="newsletter-form-block w-form">
+                    <form id="wf-form-Newsletter-Form" name="wf-form-Newsletter-Form" data-name="Newsletter Form" method="get" class="newsletter-form" data-wf-page-id="65c0b3b4f4d2b7a5f6e8a9f0" data-wf-element-id="65c0b3b4f4d2b7a5f6e8a9f1">
+                      <div class="newsletter-form-content">
+                        <div class="newsletter-form-item">
+                          <div class="form-icon-wrapper">
+                            <div class="form-icon w-embed">
+                              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M3 3H21C21.5523 3 22 3.44772 22 4V20C22 20.5523 21.5523 21 21 21H3C2.44772 21 2 20.5523 2 20V4C2 3.44772 2.44772 3 3 3ZM20 7.23792L12.0718 14.338L4 7.21594V19H20V7.23792ZM4.51146 5L12.0619 11.662L19.501 5H4.51146Z"></path>
+                              </svg>
+                            </div>
+                            <input type="email" class="newsletter-form-input w-input" maxlength="256" name="Newsletter-Email" data-name="Newsletter Email" placeholder="Enter your email" id="Newsletter-Email" required="">
+                          </div>
+                        </div>
+                        <div class="newsletter-form-item">
+                          <button type="submit" data-wait="Subscribing..." class="button-primary w-button">
+                            <span class="button-text">Get Project Updates</span>
+                            <div class="button-icon w-embed">
+                              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M16.0037 9.41421L7.39712 18.0208L5.98291 16.6066L14.5895 8H7.00373V6H18.0037V17H16.0037V9.41421Z"></path>
+                              </svg>
+                            </div>
+                          </button>
+                        </div>
                       </div>
-                      <div class="form-input-block">
-                        <div class="form-label">Email:</div>
-                        <input class="form-input no-margin w-input" maxlength="256" name="email" data-name="Email" placeholder="Email Address" type="email" id="email" required="">
-                      </div>
-                      <input type="submit" data-wait="Please wait..." class="button is-newsletter w-button" value="Subscribe">
                     </form>
-                    <div class="form-message-success w-form-done">
-                      <div>Thank you! Your submission has been received!</div>
+                    <div class="success-message w-form-done">
+                      <div class="success-message-content">
+                        <div class="success-icon w-embed">
+                          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M12 22C6.47715 22 2 17.5228 2 12C2 6.47715 6.47715 2 12 2C17.5228 2 22 6.47715 22 12C22 17.5228 17.5228 22 12 22ZM12 20C16.4183 20 20 16.4183 20 12C20 7.58172 16.4183 4 12 4C7.58172 4 4 7.58172 4 12C4 16.4183 7.58172 20 12 20ZM11.0026 16L6.75999 11.7574L8.17421 10.3431L11.0026 13.1716L16.6595 7.51472L18.0737 8.92893L11.0026 16Z"></path>
+                          </svg>
+                        </div>
+                        <div>Thank you! You'll now receive updates on our latest projects and tech insights.</div>
+                      </div>
                     </div>
-                    <div class="form-message-error w-form-fail">
-                      <div>Oops! Something went wrong while submitting the form.</div>
+                    <div class="error-message w-form-fail">
+                      <div class="error-message-content">
+                        <div class="error-icon w-embed">
+                          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M12 22C6.47715 22 2 17.5228 2 12C2 6.47715 6.47715 2 12 2C17.5228 2 22 6.47715 22 12C22 17.5228 17.5228 22 12 22ZM12 20C16.4183 20 20 16.4183 20 12C20 7.58172 16.4183 4 12 4C7.58172 4 4 7.58172 4 12C4 16.4183 7.58172 20 12 20ZM11 15H13V17H11V15ZM11 7H13V13H11V7Z"></path>
+                          </svg>
+                        </div>
+                        <div>Oops! Something went wrong while submitting the form.</div>
+                      </div>
                     </div>
                   </div>
                 </div>
