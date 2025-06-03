@@ -14,12 +14,149 @@
         letter-spacing: 1px;
         text-transform: uppercase;
       }
+      
       .nav-text.is-hover {
         font-family: 'Outfit', sans-serif;
         font-weight: bold;
         font-size: 18px;
         letter-spacing: 1px;
         text-transform: uppercase;
+      }
+      
+      /* Consistent card sizing */
+      .blog-post-image {
+        width: 100%;
+        height: 240px; /* Fixed height for all project images */
+        object-fit: cover;
+        object-position: center top;
+      }
+      
+      .blog-post-category {
+        font-weight: 600;
+        color: #ffffff;
+        background-color: #4353FF;
+        padding: 6px 12px;
+        border-radius: 4px;
+      }
+      
+      .blog-link-wrapper {
+        transition: transform 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94), box-shadow 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+      }
+      
+      .blog-link-wrapper:hover {
+        transform: scale(1.12);
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+        z-index: 1;
+      }
+      
+      /* Newsletter Form Styles */
+      .form-icon-wrapper {
+        position: relative;
+        display: flex;
+        align-items: center;
+      }
+      
+      .form-icon {
+        position: absolute;
+        left: 12px;
+        width: 20px;
+        height: 20px;
+        color: #6b7280;
+      }
+      
+      .newsletter-form-input {
+        padding-left: 40px !important;
+        border-radius: 8px !important;
+        border: 1px solid #e5e7eb !important;
+        transition: all 0.3s ease;
+      }
+      
+      .newsletter-form-input:focus {
+        border-color: #4338ca !important;
+        box-shadow: 0 0 0 2px rgba(67, 56, 202, 0.2) !important;
+      }
+      
+      .button-primary {
+        border-radius: 8px !important;
+        transition: transform 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94), box-shadow 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 8px;
+        padding: 12px 24px !important;
+        background-color: #4f46e5 !important;
+        color: white !important;
+        font-weight: 500;
+      }
+      
+      .button-primary:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 10px 20px rgba(79, 70, 229, 0.3);
+        background-color: #4338ca !important;
+      }
+      
+      .button-icon {
+        width: 18px;
+        height: 18px;
+        transition: transform 0.3s ease;
+      }
+      
+      .button-primary:hover .button-icon {
+        transform: translateX(3px);
+      }
+      
+      .success-message-content, .error-message-content {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
+        padding: 16px;
+        border-radius: 8px;
+      }
+      
+      .success-icon, .error-icon {
+        width: 24px;
+        height: 24px;
+      }
+      
+      .success-icon {
+        color: #10b981;
+      }
+      
+      .error-icon {
+        color: #ef4444;
+      }
+      
+      /* Newsletter Section Styling */
+      
+      .newsletter-form {
+        position: relative;
+        z-index: 1;
+      }
+      
+      .newsletter-form-content {
+        display: flex;
+        flex-direction: row;
+        gap: 12px;
+        max-width: 600px;
+        margin: 0 auto;
+      }
+      
+      @media screen and (max-width: 767px) {
+        .newsletter-form-content {
+          flex-direction: column;
+        }
+        
+        .button-primary {
+          width: 100%;
+          justify-content: center;
+        }
+        
+        .button-text {
+          text-align: center;
+          display: block;
+          width: 100%;
+        }
       }
     </style>
     <meta charset="utf-8">
@@ -299,15 +436,15 @@
                 <div class="subtitle-wrapper">
                   <div class="subtitle">Our Work</div>
                 </div>
-                <h2 class="heading-style-h3 text-align-center">Full-Stack <span class="featured">Web Applications</span></h2>
+                <h2 class="heading-style-h3 text-align-center">Website <span class="featured">Development</span></h2>
                 <div class="spacer-medium"></div>
                 <div class="w-dyn-list">
                   <div role="list" class="blog-component-grid w-dyn-items">
                     <div role="listitem" class="w-dyn-item">
                       <a data-w-id="408714d0-c74a-fb13-09f1-982e783c4a9f" href="#" class="blog-link-wrapper w-inline-block">
                         <div class="blog-image-wrapper">
-                          <img src="images/67d08fb9f071efcba5109eef_portrait-woman-working.webp" loading="lazy" style="-webkit-transform:translate3d(0, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-moz-transform:translate3d(0, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-ms-transform:translate3d(0, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);transform:translate3d(0, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0)" alt="Clinic Management System" class="blog-post-image">
-                          <div class="blog-post-category">Full-Stack Web App</div>
+                          <img src="images/medical software interface.jpg" loading="lazy" style="-webkit-transform:translate3d(0, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-moz-transform:translate3d(0, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-ms-transform:translate3d(0, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);transform:translate3d(0, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0)" alt="Clinic Management System" class="blog-post-image">
+                          <div class="blog-post-category">Healthcare Software</div>
                         </div>
                         <div class="blog-post-content">
                           <h2 class="blog-post-title">Clinic Management System</h2>
@@ -342,8 +479,8 @@
                     <div role="listitem" class="w-dyn-item">
                       <a data-w-id="408714d0-c74a-fb13-09f1-982e783c4a9f" href="#" class="blog-link-wrapper w-inline-block">
                         <div class="blog-image-wrapper">
-                          <img src="images/67d08f6988ce93c8a24aa631_portrait-woman-working-startup-company.webp" loading="lazy" style="-webkit-transform:translate3d(0, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-moz-transform:translate3d(0, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-ms-transform:translate3d(0, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);transform:translate3d(0, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0)" alt="E-Commerce Website" class="blog-post-image">
-                          <div class="blog-post-category">Full-Stack Web App</div>
+                          <img src="images/e-commerce website.jpg" loading="lazy" style="-webkit-transform:translate3d(0, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-moz-transform:translate3d(0, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-ms-transform:translate3d(0, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);transform:translate3d(0, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0)" alt="E-Commerce Website" class="blog-post-image">
+                          <div class="blog-post-category">E-Commerce Platform</div>
                         </div>
                         <div class="blog-post-content">
                           <h2 class="blog-post-title">E-Commerce Website</h2>
@@ -378,8 +515,8 @@
                     <div role="listitem" class="w-dyn-item">
                       <a data-w-id="408714d0-c74a-fb13-09f1-982e783c4a9f" href="#" class="blog-link-wrapper w-inline-block">
                         <div class="blog-image-wrapper">
-                          <img src="images/67d08f2e53a3ebdceab812d8_portrait-working-startup-company.webp" loading="lazy" style="-webkit-transform:translate3d(0, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-moz-transform:translate3d(0, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-ms-transform:translate3d(0, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);transform:translate3d(0, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0)" alt="Online Learning Platform" class="blog-post-image">
-                          <div class="blog-post-category">Full-Stack Web App</div>
+                          <img src="images/online course platform.jpg" loading="lazy" style="-webkit-transform:translate3d(0, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-moz-transform:translate3d(0, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-ms-transform:translate3d(0, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);transform:translate3d(0, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0)" alt="Online Learning Platform" class="blog-post-image">
+                          <div class="blog-post-category">Education Platform</div>
                         </div>
                         <div class="blog-post-content">
                           <h2 class="blog-post-title">Online Learning Platform</h2>
@@ -414,8 +551,8 @@
                     <div role="listitem" class="w-dyn-item">
                       <a data-w-id="408714d0-c74a-fb13-09f1-982e783c4a9f" href="#" class="blog-link-wrapper w-inline-block">
                         <div class="blog-image-wrapper">
-                          <img src="images/67d08eab5e6d7eec89b30fdb_women-working-together.webp" loading="lazy" style="-webkit-transform:translate3d(0, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-moz-transform:translate3d(0, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-ms-transform:translate3d(0, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);transform:translate3d(0, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0)" alt="Inventory Management System" class="blog-post-image">
-                          <div class="blog-post-category">Full-Stack Web App</div>
+                          <img src="images/inventory dashboard.jpg" loading="lazy" style="-webkit-transform:translate3d(0, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-moz-transform:translate3d(0, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-ms-transform:translate3d(0, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);transform:translate3d(0, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0)" alt="Inventory Management System" class="blog-post-image">
+                          <div class="blog-post-category">Inventory System</div>
                         </div>
                         <div class="blog-post-content">
                           <h2 class="blog-post-title">Inventory Management System</h2>
@@ -450,8 +587,8 @@
                     <div role="listitem" class="w-dyn-item">
                       <a data-w-id="408714d0-c74a-fb13-09f1-982e783c4a9f" href="#" class="blog-link-wrapper w-inline-block">
                         <div class="blog-image-wrapper">
-                          <img src="images/67d0903caa6f777f7c2b6522_portrait-woman-working-startup.webp" loading="lazy" style="-webkit-transform:translate3d(0, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-moz-transform:translate3d(0, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-ms-transform:translate3d(0, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);transform:translate3d(0, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0)" alt="Real Estate Portal" class="blog-post-image">
-                          <div class="blog-post-category">Full-Stack Web App</div>
+                          <img src="images/real estate website.jpg" loading="lazy" style="-webkit-transform:translate3d(0, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-moz-transform:translate3d(0, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-ms-transform:translate3d(0, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);transform:translate3d(0, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0)" alt="Real Estate Portal" class="blog-post-image">
+                          <div class="blog-post-category">Real Estate Platform</div>
                         </div>
                         <div class="blog-post-content">
                           <h2 class="blog-post-title">Real Estate Portal</h2>
@@ -486,8 +623,8 @@
                     <div role="listitem" class="w-dyn-item">
                       <a data-w-id="408714d0-c74a-fb13-09f1-982e783c4a9f" href="#" class="blog-link-wrapper w-inline-block">
                         <div class="blog-image-wrapper">
-                          <img src="images/67d08da1d8bc3deb105ff8e2_beautiful-women-working-together-startup-company.webp" loading="lazy" style="-webkit-transform:translate3d(0, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-moz-transform:translate3d(0, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-ms-transform:translate3d(0, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);transform:translate3d(0, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0)" alt="Fitness Tracker Mobile App" class="blog-post-image">
-                          <div class="blog-post-category">Mobile App</div>
+                          <img src="images/fitness app interface.jpg" loading="lazy" style="-webkit-transform:translate3d(0, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-moz-transform:translate3d(0, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-ms-transform:translate3d(0, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);transform:translate3d(0, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0)" alt="Fitness Tracker Mobile App" class="blog-post-image">
+                          <div class="blog-post-category">Fitness Mobile App</div>
                         </div>
                         <div class="blog-post-content">
                           <h2 class="blog-post-title">Fitness Tracker Mobile App</h2>
@@ -533,8 +670,8 @@
                     <div role="listitem" class="w-dyn-item">
                       <a data-w-id="408714d0-c74a-fb13-09f1-982e783c4a9f" href="#" class="blog-link-wrapper w-inline-block">
                         <div class="blog-image-wrapper">
-                          <img src="images/67d08eab5e6d7eec89b30fdb_women-working-together.webp" loading="lazy" style="-webkit-transform:translate3d(0, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-moz-transform:translate3d(0, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-ms-transform:translate3d(0, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);transform:translate3d(0, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0)" alt="Food Delivery App" class="blog-post-image">
-                          <div class="blog-post-category">Mobile App</div>
+                          <img src="images/online store interface.jpg" loading="lazy" style="-webkit-transform:translate3d(0, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-moz-transform:translate3d(0, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-ms-transform:translate3d(0, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);transform:translate3d(0, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0)" alt="Food Delivery App" class="blog-post-image">
+                          <div class="blog-post-category">Food Delivery App</div>
                         </div>
                         <div class="blog-post-content">
                           <h2 class="blog-post-title">Food Delivery App</h2>
@@ -570,11 +707,11 @@
                     <div role="listitem" class="w-dyn-item">
                       <a data-w-id="408714d0-c74a-fb13-09f1-982e783c4a9f" href="#" class="blog-link-wrapper w-inline-block">
                         <div class="blog-image-wrapper">
-                          <img src="images/67d0903caa6f777f7c2b6522_portrait-woman-working-startup.webp" loading="lazy" style="-webkit-transform:translate3d(0, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-moz-transform:translate3d(0, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-ms-transform:translate3d(0, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);transform:translate3d(0, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0)" alt="Travel Companion App" class="blog-post-image">
-                          <div class="blog-post-category">Mobile App</div>
+                          <img src="images/health tracking mobile app.jpg" loading="lazy" style="-webkit-transform:translate3d(0, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-moz-transform:translate3d(0, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-ms-transform:translate3d(0, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);transform:translate3d(0, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0)" alt="Health Tracking App" class="blog-post-image">
+                          <div class="blog-post-category">Health Mobile App</div>
                         </div>
                         <div class="blog-post-content">
-                          <h2 class="blog-post-title">Travel Companion App</h2>
+                          <h2 class="blog-post-title">Health Tracking App</h2>
                           <div class="blog-post-info">
                             <div class="blog-post-info-item">
                               <div class="clock-icon w-embed">
@@ -583,7 +720,7 @@
                                 </svg>
                               </div>
                               <div class="text-size-small">Features:</div>
-                              <div class="text-size-small text-color-primary">Offline maps, trip planner, local guides</div>
+                              <div class="text-size-small text-color-primary">Vitals monitoring, medication tracking, doctor appointments</div>
                             </div>
                             <div class="blog-post-icon-wrap">
                               <div class="blog-post-icon-overflow">
@@ -840,6 +977,91 @@
                         </div>
                         <div>Oops! Something went wrong while submitting the form.</div>
                       </div>
+                    </div>
+                  </div>
+                </div>
+                
+                <div class="spacer-xlarge"></div>
+                
+                <div class="subtitle-wrapper">
+                  <div class="subtitle">Student Work</div>
+                </div>
+                <h2 class="heading-style-h3 text-align-center">Academic <span class="featured">Projects</span></h2>
+                <div class="spacer-medium"></div>
+                <div class="w-dyn-list">
+                  <div role="list" class="blog-component-grid w-dyn-items">
+                    <div role="listitem" class="w-dyn-item">
+                      <a data-w-id="408714d0-c74a-fb13-09f1-982e783c4a9f" href="#" class="blog-link-wrapper w-inline-block">
+                        <div class="blog-image-wrapper">
+                          <img src="images/stock management software.jpg" loading="lazy" style="-webkit-transform:translate3d(0, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-moz-transform:translate3d(0, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-ms-transform:translate3d(0, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);transform:translate3d(0, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0)" alt="Inventory Management System" class="blog-post-image">
+                          <div class="blog-post-category">Stock Control System</div>
+                        </div>
+                        <div class="blog-post-content">
+                          <h2 class="blog-post-title">Campus Inventory Tracker</h2>
+                          <div class="blog-post-info">
+                            <div class="blog-post-info-item">
+                              <div class="clock-icon w-embed">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+                                  <path d="M12 22C6.47715 22 2 17.5228 2 12C2 6.47715 6.47715 2 12 2C17.5228 2 22 6.47715 22 12C22 17.5228 17.5228 22 12 22ZM12 20C16.4183 20 20 16.4183 20 12C20 7.58172 16.4183 4 12 4C7.58172 4 4 7.58172 4 12C4 16.4183 7.58172 20 12 20ZM13 12H17V14H11V7H13V12Z"></path>
+                                </svg>
+                              </div>
+                              <div class="text-size-small">Features:</div>
+                              <div class="text-size-small text-color-primary">Barcode scanning, stock levels, equipment checkout</div>
+                            </div>
+                            <div class="blog-post-icon-wrap">
+                              <div class="blog-post-icon-overflow">
+                                <div style="-webkit-transform:translate3d(0rem, 0rem, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-moz-transform:translate3d(0rem, 0rem, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-ms-transform:translate3d(0rem, 0rem, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);transform:translate3d(0rem, 0rem, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0)" class="blog-post-icon _01 w-embed">
+                                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+                                    <path d="M16.0037 9.41421L7.39712 18.0208L5.98291 16.6066L14.5895 8H7.00373V6H18.0037V17H16.0037V9.41421Z"></path>
+                                  </svg>
+                                </div>
+                                <div style="-webkit-transform:translate3d(-1rem, 1rem, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-moz-transform:translate3d(-1rem, 1rem, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-ms-transform:translate3d(-1rem, 1rem, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);transform:translate3d(-1rem, 1rem, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0)" class="blog-post-icon _02 w-embed">
+                                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+                                    <path d="M16.0037 9.41421L7.39712 18.0208L5.98291 16.6066L14.5895 8H7.00373V6H18.0037V17H16.0037V9.41421Z"></path>
+                                  </svg>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </a>
+                    </div>
+                    
+                    <div role="listitem" class="w-dyn-item">
+                      <a data-w-id="408714d0-c74a-fb13-09f1-982e783c4a9f" href="#" class="blog-link-wrapper w-inline-block">
+                        <div class="blog-image-wrapper">
+                          <img src="images/learning management system.jpg" loading="lazy" style="-webkit-transform:translate3d(0, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-moz-transform:translate3d(0, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-ms-transform:translate3d(0, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);transform:translate3d(0, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0)" alt="Learning Management System" class="blog-post-image">
+                          <div class="blog-post-category">Educational Technology</div>
+                        </div>
+                        <div class="blog-post-content">
+                          <h2 class="blog-post-title">Student Learning Portal</h2>
+                          <div class="blog-post-info">
+                            <div class="blog-post-info-item">
+                              <div class="clock-icon w-embed">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+                                  <path d="M12 22C6.47715 22 2 17.5228 2 12C2 6.47715 6.47715 2 12 2C17.5228 2 22 6.47715 22 12C22 17.5228 17.5228 22 12 22ZM12 20C16.4183 20 20 16.4183 20 12C20 7.58172 16.4183 4 12 4C7.58172 4 4 7.58172 4 12C4 16.4183 7.58172 20 12 20ZM13 12H17V14H11V7H13V12Z"></path>
+                                </svg>
+                              </div>
+                              <div class="text-size-small">Features:</div>
+                              <div class="text-size-small text-color-primary">Course management, assignments, student progress tracking</div>
+                            </div>
+                            <div class="blog-post-icon-wrap">
+                              <div class="blog-post-icon-overflow">
+                                <div style="-webkit-transform:translate3d(0rem, 0rem, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-moz-transform:translate3d(0rem, 0rem, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-ms-transform:translate3d(0rem, 0rem, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);transform:translate3d(0rem, 0rem, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0)" class="blog-post-icon _01 w-embed">
+                                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+                                    <path d="M16.0037 9.41421L7.39712 18.0208L5.98291 16.6066L14.5895 8H7.00373V6H18.0037V17H16.0037V9.41421Z"></path>
+                                  </svg>
+                                </div>
+                                <div style="-webkit-transform:translate3d(-1rem, 1rem, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-moz-transform:translate3d(-1rem, 1rem, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-ms-transform:translate3d(-1rem, 1rem, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);transform:translate3d(-1rem, 1rem, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0)" class="blog-post-icon _02 w-embed">
+                                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+                                    <path d="M16.0037 9.41421L7.39712 18.0208L5.98291 16.6066L14.5895 8H7.00373V6H18.0037V17H16.0037V9.41421Z"></path>
+                                  </svg>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </a>
                     </div>
                   </div>
                 </div>
