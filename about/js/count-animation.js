@@ -3,18 +3,17 @@ document.addEventListener('DOMContentLoaded', function() {
   const numberElements = document.querySelectorAll('.about-number');
   
   // Code-related symbols for different types of counters
-  const codeSymbols = {
-    languages: ['JS', 'PY', 'TS', 'GO', 'CS', 'RS', 'JV', 'KT', 'SW', 'RB', 'PH', 'CP'],
-    projects: ['<>', '//', '{}', '[]', '()', '=>', '::'],
-    lines: ['0101', '1010', 'func', 'var', 'let', 'for', 'if', 'else', 'while', 'class']
-  };
+  // const codeSymbols = {
+  //   languages: ['JS', 'PY', 'TS', 'GO', 'CS', 'RS', 'JV', 'KT', 'SW', 'RB', 'PH', 'CP'],
+  //   projects: ['<>', '//', '{}', '[]', '()', '=>', '::'],
+  //   lines: ['0101', '1010', 'func', 'var', 'let', 'for', 'if', 'else', 'while', 'class']
+  // };
   
-  // Code-related colors for different types
-  const codeColors = {
-    languages: ['#61dafb', '#3572A5', '#2b7489', '#00ADD8', '#178600', '#dea584', '#b07219', '#A97BFF', '#ffac45', '#701516', '#4F5D95', '#f34b7d'],
-    projects: ['#00ccff', '#33ff99', '#ff6699', '#ffcc00'],
-    lines: ['#00ff00', '#33cc33', '#00cc00', '#66ff66']
-  };
+  // const codeColors = {
+  //   languages: ['#61dafb', '#3572A5', '#2b7489', '#00ADD8', '#178600', '#dea584', '#b07219', '#A97BFF', '#ffac45', '#701516', '#4F5D95', '#f34b7d'],
+  //   projects: ['#00ccff', '#33ff99', '#ff6699', '#ffcc00'],
+  //   lines: ['#00ff00', '#33cc33', '#00cc00', '#66ff66']
+  // };
   
   // Create an intersection observer
   const observer = new IntersectionObserver((entries) => {
@@ -61,31 +60,31 @@ document.addEventListener('DOMContentLoaded', function() {
         const originalColor = window.getComputedStyle(element).color;
         
         // Add a subtle highlight effect during animation
-        element.style.textShadow = '0 0 8px rgba(0, 255, 255, 0.7)';
+        // element.style.textShadow = '0 0 8px rgba(0, 255, 255, 0.7)';
         
         // Add a code-like background effect
-        const codeBackground = document.createElement('div');
-        codeBackground.className = 'code-background';
-        codeBackground.style.position = 'absolute';
-        codeBackground.style.top = '0';
-        codeBackground.style.left = '0';
-        codeBackground.style.width = '100%';
-        codeBackground.style.height = '100%';
-        codeBackground.style.opacity = '0.1';
-        codeBackground.style.zIndex = '-1';
-        codeBackground.style.pointerEvents = 'none';
-        codeBackground.style.fontFamily = 'monospace';
-        codeBackground.style.fontSize = '10px';
-        codeBackground.style.overflow = 'hidden';
-        codeBackground.style.color = '#00ff00';
+        // const codeBackground = document.createElement('div');
+        // codeBackground.className = 'code-background';
+        // codeBackground.style.position = 'absolute';
+        // codeBackground.style.top = '0';
+        // codeBackground.style.left = '0';
+        // codeBackground.style.width = '100%';
+        // codeBackground.style.height = '100%';
+        // codeBackground.style.opacity = '0.1';
+        // codeBackground.style.zIndex = '-1';
+        // codeBackground.style.pointerEvents = 'none';
+        // codeBackground.style.fontFamily = 'monospace';
+        // codeBackground.style.fontSize = '10px';
+        // codeBackground.style.overflow = 'hidden';
+        // codeBackground.style.color = '#00ff00';
         
         // Position the element relatively if it's not already
-        const currentPosition = window.getComputedStyle(element).position;
-        if (currentPosition === 'static') {
-          element.style.position = 'relative';
-        }
+        // const currentPosition = window.getComputedStyle(element).position;
+        // if (currentPosition === 'static') {
+        //   element.style.position = 'relative';
+        // }
         
-        element.appendChild(codeBackground);
+        // element.appendChild(codeBackground);
         
         // Digital scramble effect variables
         let scrambleInterval;
@@ -94,18 +93,18 @@ document.addEventListener('DOMContentLoaded', function() {
         const scrambleDuration = 2000; // Duration of scramble effect in ms
         
         // Function to generate random code-like content
-        const generateCodeBackground = () => {
-          const symbols = codeSymbols[codeType] || ['0', '1'];
-          let content = '';
-          for (let i = 0; i < 50; i++) {
-            content += symbols[Math.floor(Math.random() * symbols.length)] + ' ';
+        // const generateCodeBackground = () => {
+        //   const symbols = codeSymbols[codeType] || ['0', '1'];
+        //   let content = '';
+        //   for (let i = 0; i < 50; i++) {
+        //     content += symbols[Math.floor(Math.random() * symbols.length)] + ' ';
             if (i % 5 === 4) content += '<br>';
           }
           codeBackground.innerHTML = content;
         };
         
         // Generate initial code background
-        generateCodeBackground();
+        // generateCodeBackground();
         
         // Function to format number for display
         const formatNumber = (num) => {
@@ -120,9 +119,9 @@ document.addEventListener('DOMContentLoaded', function() {
           scrambleCount++;
           
           // Update code background
-          if (scrambleCount % 2 === 0) {
-            generateCodeBackground();
-          }
+          // if (scrambleCount % 2 === 0) {
+          //   generateCodeBackground();
+          // }
           
           // Generate random number close to target as we progress
           let randomNum;
@@ -142,32 +141,32 @@ document.addEventListener('DOMContentLoaded', function() {
           element.firstChild.textContent = formatNumber(randomNum);
           
           // Add code-like styling during scramble
-          const colors = codeColors[codeType] || ['#00ffcc', '#00ccff'];
-          element.style.color = colors[scrambleCount % colors.length];
+          // const colors = codeColors[codeType] || ['#00ffcc', '#00ccff'];
+          // element.style.color = colors[scrambleCount % colors.length];
           
           // Add code symbols for certain types
-          if (codeType === 'languages' && scrambleCount < maxScrambles - 5) {
-            const randomLang = codeSymbols.languages[Math.floor(Math.random() * codeSymbols.languages.length)];
-            element.firstChild.textContent = randomLang + ' ' + formatNumber(randomNum);
-          }
+          // if (codeType === 'languages' && scrambleCount < maxScrambles - 5) {
+          //   const randomLang = codeSymbols.languages[Math.floor(Math.random() * codeSymbols.languages.length)];
+          //   element.firstChild.textContent = randomLang + ' ' + formatNumber(randomNum);
+          // }
           
           // End scramble effect and start smooth counting
           if (scrambleCount >= maxScrambles) {
             clearInterval(scrambleInterval);
             
             // Reset color
-            element.style.color = originalColor;
+            // element.style.color = originalColor;
             
             // Fade out code background
-            const fadeOut = setInterval(() => {
-              const currentOpacity = parseFloat(codeBackground.style.opacity);
-              if (currentOpacity > 0) {
-                codeBackground.style.opacity = (currentOpacity - 0.01).toString();
-              } else {
-                clearInterval(fadeOut);
-                codeBackground.remove();
-              }
-            }, 20);
+            // const fadeOut = setInterval(() => {
+            //   const currentOpacity = parseFloat(codeBackground.style.opacity);
+            //   if (currentOpacity > 0) {
+            //     codeBackground.style.opacity = (currentOpacity - 0.01).toString();
+            //   } else {
+            //     clearInterval(fadeOut);
+            //     codeBackground.remove();
+            //   }
+            // }, 20);
             
             // Start the smooth counting animation
             let startNumber = Math.floor(targetNumber * 0.7); // Start from 70% of target
@@ -187,9 +186,9 @@ document.addEventListener('DOMContentLoaded', function() {
                 element.firstChild.textContent = text;
                 
                 // Remove effects after a short delay
-                setTimeout(() => {
-                  element.style.textShadow = 'none';
-                }, 300);
+                // setTimeout(() => {
+                //   element.style.textShadow = 'none';
+                // }, 300);
               }
             };
             
