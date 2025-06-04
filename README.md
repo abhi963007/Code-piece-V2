@@ -4,7 +4,7 @@
 
 Code Piece is a cutting-edge tech startup dedicated to delivering exceptional full-stack development and bespoke software solutions. Our mission is to transform your ideas into robust, scalable, and high-performance applications.
 
-![Code Piece Logo](images/67d0a0327b8346375dfe7dc4_logotype.png)
+![Code Piece Logo](about/images/67d0a0327b8346375dfe7dc4_logotype.png)
 
 ## ✨ Overview
 
