@@ -923,6 +923,71 @@ textarea.w-input, textarea.w-select {
   .w-col-small-12 {
     width: 100%;
   }
+
+  /* Custom styles for services page mobile responsiveness */
+  .service-component-wrapper {
+    flex-direction: column; /* Stack items vertically */
+    align-items: center; /* Center items horizontally */
+  }
+
+  .service-image-absolute {
+    position: relative; /* Remove absolute positioning */
+    width: 100%; /* Full width */
+    height: 200px; /* Set a fixed height for the image container */
+    margin-bottom: 20px; /* Add some space below the image */
+  }
+
+  .service-image {
+    object-fit: cover; /* Ensure the image covers the container */
+    height: 100%;
+  }
+
+  .service-content-box {
+    width: 100%; /* Full width for content */
+    text-align: center; /* Center text */
+  }
+
+  .service-top-content {
+    flex-direction: column; /* Stack title and number vertically */
+    align-items: center;
+  }
+
+  .service-title-wrap {
+    margin-bottom: 10px;
+  }
+
+  .service-description-item {
+    height: auto !important; /* Allow description to take natural height */
+  }
+
+  .service-number-wrap {
+    margin-top: 10px;
+  }
+
+  .section-service-header .heading-style-h2 {
+    font-size: 4rem; /* Adjust heading size for mobile */
+  }
+
+  .section-service-header .subtitle {
+    font-size: 1rem; /* Adjust subtitle size for mobile */
+  }
+
+  .cta-01 .cta-image-wrapper {
+    display: none; /* Hide the large image on mobile for better layout */
+  }
+
+  .cta-01 .cta-container {
+    flex-direction: column; /* Stack CTA content vertically */
+    padding: 20px; /* Add padding for better spacing */
+  }
+
+  .cta-01 .max-width-xlarge, .cta-01 .max-width-medium {
+    width: 100%; /* Full width for text blocks */
+  }
+
+  .cta-01 .button-wrapper {
+    margin-top: 20px; /* Space above the button */
+  }
 }
 
 @media screen and (max-width: 479px) {
